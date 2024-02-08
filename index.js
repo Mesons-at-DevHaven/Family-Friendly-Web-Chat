@@ -1,6 +1,3 @@
-const { PythonShell } = require('python-shell');
-// We enclose this in window.onload.
-// So we don't have ridiculous errors.
 window.onload = function () {
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -13,6 +10,8 @@ window.onload = function () {
     appId: "1:94142602809:web:581c6bcee72ab81febb7e8",
     measurementId: "G-50BFM14Y4S"
   };
+
+
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   // This is very IMPORTANT!! We're going to use "db" a lot.
@@ -205,13 +204,16 @@ window.onload = function () {
     }
     // Save name. It literally saves the name to localStorage
     save_name(name) {
-      // Save name to localStorage
       localStorage.setItem('name', name)
     }
+
+    
 
   // Sends message/saves the message to firebase database
   send_message(message){
     var parent = this
+    
+    message = makeItSafe(message)
     // if the local storage name is null and there is no message
     // then return/don't send the message. The user is somehow hacking
     // to send messages. Or they just deleted the
@@ -232,6 +234,7 @@ window.onload = function () {
         .then(function () {
           // After we send the chat refresh to get the new messages
           parent.refresh_chat()
+          // Translate the message
         })
     })
   }
@@ -245,6 +248,7 @@ window.onload = function () {
       return null
     }
   }
+  
   // Refresh chat gets the message/chat data from firebase
   refresh_chat(){
     var chat_content_container = document.getElementById('chat_content_container')

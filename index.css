@@ -44,6 +44,7 @@ body{
     color: #fff;/*EBEBD3, C5283D*/
     font-size: 55px;
     letter-spacing: 2px;
+    -webkit-user-select: none;
     user-select: none;
   }
   
@@ -182,8 +183,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    float: left;
     margin-top: 20px;
   }
   #chat_logout{
@@ -283,8 +282,8 @@ body{
   }
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #cccs;
-  }
+      background: #ccc;
+    }
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #9240d6;
