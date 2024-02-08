@@ -7,7 +7,7 @@ Welcome to our DevHaven hackathon project! This README file will provide an over
 
 ## Project Description
 
-A Application that takes your texts convert 
+  We built a family-friendly web chat service that uses a profanity filters API and translation API to get desired results.
 
 ## Installation
 
