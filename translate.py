@@ -66,4 +66,5 @@ def makeItSafe(text):
     data = res.read()
     datanew = data.decode("utf-8")
     dataout = datanew[11:-2]
+    print(dataout)
     return dataout
