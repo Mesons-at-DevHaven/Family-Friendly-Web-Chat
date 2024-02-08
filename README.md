@@ -11,21 +11,20 @@ Welcome to our DevHaven hackathon project! This README file will provide an over
 
 ## Installation
 
-[Provide instructions on how to install and set up your project]
+Use the link provided to access the website hosted on Vercel.
 
 ## Usage
 
-[Provide instructions on how to use your project]
-
-## Contributing
-
-[Provide guidelines for contributing to your project]
+First, enter the username to enter the chat screen and upload your texts to the Firebase storage.
+You can access the website from multiple browsers simultaneously to interact.
 
 ## License
 
-[Specify the license under which your project is released]
+Azure cognitive services text Translation API
+PurgoMalum Profanity filter- RestAPI
 
 ## Contact
+Team MESONS
 
 Devaj Rathore 
 
