@@ -22,15 +22,12 @@ params = {
 
 headers = {
     'Ocp-Apim-Subscription-Key': key,
-    # location required if you're using a multi-service or regional (not global) resource.
     'Ocp-Apim-Subscription-Region': location,
     'Content-type': 'application/json',
     'X-ClientTraceId': str(uuid.uuid4())
 }
 
-textinput = input("Enter the text: ")
-
-# You can pass more than one object in body.
+textinput = input()
 body = [{
     'text': textinput
 }]
@@ -59,7 +56,6 @@ body = [{
 
 request = requests.post(constructed_url, params=params, headers=headers, json=body)
 response = request.json()
-print(response[0]['translations'][0]['text'])
 texttoprof= response[0]['translations'][0]['text']
 texttoprof = texttoprof.replace(" ", "%20")
 
@@ -70,25 +66,3 @@ data = res.read()
 datanew = data.decode("utf-8")
 dataout = datanew[11:-2]
 print(dataout)
-
-params3 = {
-    'api-version': '3.0',
-    'from': ['en'],
-    'to': languageIN,
-    'toScript': 'Latn'
-}
-
-headers = {
-    'Ocp-Apim-Subscription-Key': key,
-    'Ocp-Apim-Subscription-Region': location,
-    'Content-type': 'application/json',
-    'X-ClientTraceId': str(uuid.uuid4())
-}
-
-body = [{
-    'text': textinput
-}]
-
-request = requests.post(constructed_url, params=params3, headers=headers, json=body)
-response = request.json()
-print(response[0]['translations'][0]['text'])
