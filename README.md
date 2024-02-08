@@ -7,7 +7,7 @@ Welcome to our DevHaven hackathon project! This README file will provide an over
 
 ## Project Description
 
-[Provide a brief description of your project here]
+A Application that takes your texts convert 
 
 ## Installation
 
