@@ -209,25 +209,6 @@ window.onload = function () {
       localStorage.setItem('name', name)
     }
 
-  makeitsafer(message){
-  // ...
-
-  // Call the Python function makeItSafe from translate.py with message as an argument
-  function callPythonFunction(message) {
-    let options = {
-      pythonPath: 'python', // Replace with the path to your Python executable
-      scriptPath: 'translate.py' // Replace with the actual path to translate.py
-    };
-
-    PythonShell.run('translate.py', options, function (err, results) {
-      if (err) throw err;
-      console.log('Python function makeItSafe executed successfully:', results);
-    });
-  }
-
-  // Call the Python function with a message
-  callPythonFunction(message);
-  }
   // Sends message/saves the message to firebase database
   send_message(message){
     var parent = this

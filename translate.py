@@ -1,22 +1,6 @@
 import requests
 import uuid
 import http.client
-# Python Flask backend code
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
-@app.route('/api/sanitize', methods=['POST'])
-def sanitize_text():
-    text_input = request.json.get('text')
-    
-    # Call your makeItSafe function with the provided text
-    sanitized_text = makeItSafe(text_input)
-    
-    return jsonify(sanitized_text)
-
-if __name__ == '__main__':
-    app.run(debug=True)  # Run the Flask app
 
 def makeItSafe(text):
     key = "569dd2d3cd4a485da6a4291db504dc52"
