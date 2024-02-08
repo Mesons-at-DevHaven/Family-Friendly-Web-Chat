@@ -147,7 +147,7 @@ const firebaseConfig = {
         var chat_input_send = document.createElement('button')
         chat_input_send.setAttribute('id', 'chat_input_send')
         chat_input_send.setAttribute('disabled', true)
-        chat_input_send.innerHTML = `<i class="far fa-paper-plane"></i>`
+        chat_input_send.innerHTML = `<img src="paperplane.png">`
   
         var chat_input = document.createElement('input')
         chat_input.setAttribute('id', 'chat_input')
@@ -207,6 +207,8 @@ const firebaseConfig = {
         // Save name to localStorage
         localStorage.setItem('name', name)
       }
+
+      
       // Sends message/saves the message to firebase database
       send_message(message){
         var parent = this
