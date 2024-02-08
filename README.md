@@ -29,10 +29,11 @@ Welcome to our DevHaven hackathon project! This README file will provide an over
 
 Devaj Rathore 
 
+Animish Yadav
+
 Manaswi Singh
 
 Divyanshi Beniwal
 
-Animish Yadav
 
 Happy hacking!
