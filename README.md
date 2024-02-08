@@ -27,9 +27,12 @@ Welcome to our DevHaven hackathon project! This README file will provide an over
 
 ## Contact
 
-Devaj Rathore
+Devaj Rathore 
+
 Manaswi Singh
+
 Divyanshi Beniwal
+
 Animish Yadav
 
 Happy hacking!
